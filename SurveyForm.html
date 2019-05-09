@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Survey Form</title>
+	<style>
+		body {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		li {
+			list-style: none;
+		}
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#title, #description {
+			text-align: center;
+		}
+
+		label {
+			display: block;
+			margin: 20px auto;
+			font-size: 1.2em;
+		}
+
+		#submit {
+			margin-left: 35%;
+			width: 30%;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="title">Survey Form</h1>
+	<p id="description">Your feedback is important to us</p>
+	<form id="survey-form">
+		<label for="name" id="name-label">
+			*Name: <input type="text" name="name" id="name" placeholder="Enter your name" required>
+		</label>
+		<label for="email" id="email-label">
+			*Email: <input type="email" name="email" id="email" placeholder="Enter your email" required>
+		</label>
+		<label for="number" id="number-label">
+			*Age: <input type="number" name="number" id="number" min="1" max="40" placeholder="Age" required>
+		</label>
+		<label for="profession" id="profession">
+			Profession: 
+			<select name="profession" id="dropdown">
+				<option disabled>Select an option</option>
+				<option value="programmer">Programmer</option>
+				<option value="student">Student</option>
+				<option value="ceo">CEO</option>
+				<option value="socialworker">Social Worker</option>
+				<option value="human">Normal Human</option>
+				<option value="alien">Alien</option>
+			</select>
+		</label>
+		<label for="sex">
+			Sex:
+			<input type="radio" name="sex" value="male"> Male
+			<input type="radio" name="sex" value="female"> Female
+		</label>
+		<label for="like">
+			What do you like about us?
+			<select name="like" id="dropdown">
+				<option disabled>Select an option</option>
+				<option value="staff">Staff</option>
+				<option value="quality">Quality</option>
+				<option value="location">Location</option>
+			</select>
+		</label>
+		<label for="future">
+			What would you like to study here?
+			<ul>
+				<li><input type="checkbox" name="study" value="1">C</li>
+				<li><input type="checkbox" name="study" value="2">C++</li>
+				<li><input type="checkbox" name="study" value="3">C#</li>
+				<li><input type="checkbox" name="study" value="4">Java</li>
+			</ul>
+		</label>
+		<label for="comment">
+			Comment: <textarea name="comment" id="comments" cols="30" rows="5"></textarea>
+		</label>
+		<button type="submit" id="submit">Submit</button>
+	</form>
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>

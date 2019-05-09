@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Technical Documentation Page</title>
+	<style>
+		body {
+			display: flex;
+			margin: 0;
+			line-height: 1.5;
+		}
+
+		a,
+		a:visited,
+		a:link {
+			text-decoration: none;
+			color: black;
+		}
+
+		#navbar {
+			width: 20%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			background-color: #000000;
+			position: fixed;
+			left: 0;
+			border-right: 1px solid black;
+		}
+
+		#navbar header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 60px;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 1.3em;
+		}
+
+		button {
+			width: 100%;
+			margin: 5px 0;
+			padding: 15px 0;
+			border: none;
+			background-color: white;
+			font-size: 1.1em;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		#main-doc {
+			width: 76%;
+			position: absolute;
+			right: 0;
+			padding: 2%;
+		}
+
+		.main-section header {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		code {
+			background-color: lightgrey;
+			padding: 10px;
+			display: block;
+			position: relative;
+			border-left: 10px solid rgb(123, 188, 209);
+			margin: 10px 0px;
+			font-size: 1.3em;
+		}
+
+		@media (max-width: 768px) {
+			body {
+				flex-direction: column;
+			}
+
+			#navbar {
+				width: 100%;
+				height: 250px;
+				background-color: #000000;
+				position: relative;
+				border: none;
+				overflow: scroll;
+			}
+
+			#main-doc {
+				width: 100%;
+				position: relative;
+			}
+
+			.main-section header {
+				text-align: center;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav id="navbar">
+		<header>HTML Documentation</header>
+		<a class="nav-link" href="#Overview"><button>Overview</button></a>
+		<a class="nav-link" href="#Getting_Started"><button>Getting Started</button></a>
+		<a class="nav-link" href="#What_is_HTML_Head"><button>What is HTML Head</button></a>
+		<a class="nav-link" href="#Fundamentals"><button>Fundamentals</button></a>
+		<a class="nav-link" href="#Hyperlinks"><button>Hyperlinks</button></a>
+	</nav>
+	<main id="main-doc">
+		<section class="main-section" id="Overview">
+			<header>Overview</header>
+			<article>
+				<p>HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning
+					and structure of web content. Other technologies besides HTML are generally used to describe a web
+					page's appearance/presentation (CSS) or functionality/behavior
+					(JavaScript).</p>
+				<p>"Hypertext" refers to links that connect web pages to one another, either within a single website or
+					between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet
+					and linking it to pages created by other people,
+					you become an active participant in the World Wide Web.</p>
+			</article>
+		</section>
+		<section class="main-section" id="Getting_Started">
+			<header>Getting Started</header>
+			<article>
+				<p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell
+					your browser how to structure the web pages you visit. It can be as complicated or as simple as the
+					web developer wishes it to be. HTML consists
+					of a series of elements, which you use to enclose, wrap, or mark up different parts of the content
+					to make it appear or act a certain way. The enclosing tags can make a bit of content into a
+					hyperlink to link to another page on the web, italicize
+					words, and so on. For example, take the following line of content:</p>
+				<code>My cat is very grumpy</code>
+				<p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in
+					a paragraph element:<code>&#8249;p&#8250;</code></p>
+				<code>
+								&#8249;p&#8250;My cat is very grumpy&#8249;/p&#8250;
+							</code>
+				<p>The main parts of our element are:</p>
+				<ol>
+					<li>The opening tag: This consists of the name of the element (in this case, p), wrapped in opening
+						and closing angle brackets. This states where the element begins or starts to take effect — in
+						this case where the start of the paragraph is.
+					</li>
+					<li>The closing tag: This is the same as the opening tag, except that it includes a forward slash
+						before the element name. This states where the element ends — in this case where the end of the
+						paragraph is. Failing to include a closing tag is a
+						common beginner error and can lead to strange results.</li>
+					<li>The content: This is the content of the element, which in this case is just text.</li>
+					<li>The element: The opening tag plus the closing tag plus the content equals the element.</li>
+				</ol>
+				<p>There are two important categories of elements in HTML which you should know about. They are
+					block-level elements and inline elements.</p>
+				<ul>
+					<li>Block-level elements form a visible block on a page — they will appear on a new line from
+						whatever content went before it, and any content that goes after it will also appear on a new
+						line. Block-level elements tend to be structural elements
+						on the page that represent, for example, paragraphs, lists, navigation menus, footers, etc. A
+						block-level element wouldn't be nested inside an inline element, but it might be nested inside
+						another block-level element.</li>
+					<li>Inline elements are those that are contained within block-level elements and surround only small
+						parts of the document’s content, not entire paragraphs and groupings of content. An inline
+						element will not cause a new line to appear in the document;
+						they would normally appear inside a paragraph of text, for example an element
+						(hyperlink)<code>&#8249;a&#8250;</code> or emphasis elements such as
+						<code>&#8249;em&#8250;</code> or <code>&#8249;strong&#8250;</code>.</li>
+				</ul>
+			</article>
+		</section>
+		<section class="main-section" id="What_is_HTML_Head">
+			<header>What is HTML Head</header>
+			<article>
+				<p>
+					The HTML head is the contents of the <code>&#8249;head&#8250;</code> element — unlike the contents
+					of the <code>&#8249;body&#8250;</code> element (which are displayed on the page when loaded in a
+					browser), the head's content is not displayed
+					on the page. Instead, the head's job is to contain metadata about the document.
+				</p>
+				<p>
+					In larger pages however, the head can get quite full. Try going to some of your favorite websites
+					and use the developer tools to check out their head contents. Our aim here is not to show you how to
+					use everything that can possibly be put in the head,
+					but rather to teach you how to use the major elements that you'll want to include in the head, and
+					give you some familiarity. Let's get started.
+				</p>
+			</article>
+		</section>
+		<section class="main-section" id="Fundamentals">
+			<header>Fundamentals</header>
+			<article>
+				<p>One of HTML's main jobs is to give text structure and meaning (also known as semantics) so that a
+					browser can display it correctly. This article explains the way HTML can be used to structure a page
+					of text by adding headings and paragraphs, emphasizing
+					words, creating lists, and more.</p>
+				<h3>The basics: Headings and Paragraphs</h3>
+				<p>n HTML, each paragraph has to be wrapped in a <code>&#8249;p&#8250;</code> element, like so:</p>
+				<code>&#8249;p&#8250;</code>I am a super hero<code>&#8249;/p&#8250;</code>
+				<code>&#8249;h1&#8250;</code>I am a super hero<code>&#8249;/h1&#8250;</code>
+				<p>It's really up to you what exactly the elements involved represent, as long as the hierarchy makes
+					sense. You just need to bear in mind a few best practices as you create such structures:</p>
+				<ul>
+					<li>Preferably you should just use a single <code>&#8249;h1&#8250;</code> per page — this is the top
+						level heading, and all others sit below this in the hierarchy.</li>
+					<li>Make sure you use the headings in the correct order in the hierarchy. Don't use
+						<code>&#8249;h3&#8250;</code> to represent subheadings, followed by
+						<code>&#8249;h2&#8250;</code>to represent sub-subheadings — that doesn't make sense and will
+						lead to weird results.</li>
+					<li>Of the six heading levels available, you should aim to use no more than three per page, unless
+						you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become
+						unwieldy and difficult to navigate. On such occasions,
+						it is advisable to spread the content over multiple pages if possible.</li>
+				</ul>
+			</article>
+		</section>
+		<section class="main-section" id="Hyperlinks">
+			<header>Hyperlinks</header>
+			<article>
+				<p>Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a
+					feature of the Web since the very beginning, but they are what makes the Web a Web — they allow us
+					to link our documents to any other document (or other
+					resource) we want to, we can also link to specific parts of documents, and we can make apps
+					available at a simple web address (contrast this to native apps, which have to be installed and all
+					that business.) Just about any web content can be
+					converted to a link, so that when clicked (or otherwise activated) it will make the web browser go
+					to another web address (URL).</p>
+			</article>
+		</section>
+	</main>
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>z
